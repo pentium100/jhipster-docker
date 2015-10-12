@@ -6,7 +6,7 @@ MAINTAINER Julien Dubois <julien.dubois@gmail.com>
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get -y update   
 
-# install python-software-properties (so you can do add-apt-repository)
+# install python-software-properties (so you can   do add-apt-repository)
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-software-properties software-properties-common
 
 # install SSH server so we can connect multiple times to the container
