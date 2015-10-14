@@ -21,7 +21,7 @@ RUN apt-get -y update
 # install python-software-properties (so you can   do add-apt-repository)
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-software-properties software-properties-common
 
-# install SSH server so we can connect multiple times to the container
+# install SSH server so   we can connect multiple times to the container
 RUN apt-get -y install openssh-server && mkdir /var/run/sshd
 
 # install make
