@@ -35,7 +35,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-software-propert
 RUN apt-get -y install openssh-server && mkdir /var/run/sshd
 
 # install make
-# RUN apt-get -y install build-essential
+RUN apt-get -y install build-essential
 
 # install oracle java from PPA
 RUN add-apt-repository ppa:webupd8team/java -y
