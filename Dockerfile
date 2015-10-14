@@ -3,7 +3,7 @@ FROM      ubuntu:14.04
 MAINTAINER Julien Dubois    <julien.dubois@gmail.com>
 
 # make sure the package repository is up to date
-RUN echo "deb http://archive.ubuntu.com/ubuntu utopic main universe" > /etc/apt/sources.list
+# RUN echo "deb http://archive.ubuntu.com/ubuntu utopic main universe" > /etc/apt/sources.list
 # RUN echo "deb http://mirrors.163.com/ubuntu/ utopic main restricted universe multiverse" > /etc/apt/sources.list
 # RUN echo "deb http://mirrors.163.com/ubuntu/ utopic-security main restricted universe multiverse" > /etc/apt/sources.list
 # RUN echo "deb http://mirrors.163.com/ubuntu/ utopic-updates main restricted universe multiverse" > /etc/apt/sources.list
@@ -14,6 +14,16 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu utopic main universe" > /etc/apt/
 # RUN echo "deb-src http://mirrors.163.com/ubuntu/ utopic-updates main restricted universe multiverse" > /etc/apt/sources.list
 # RUN echo "deb-src http://mirrors.163.com/ubuntu/ utopic-proposed main restricted universe multiverse" > /etc/apt/sources.list
 # RUN echo "deb-src http://mirrors.163.com/ubuntu/ utopic-backports main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list
 
 
 RUN apt-get -y update   
