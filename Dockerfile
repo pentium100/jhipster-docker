@@ -1,9 +1,21 @@
 # DOCKER-VERSION 0.7.1
-FROM      ubuntu:14.04
+FROM      ubuntu:14.10
 MAINTAINER Julien Dubois <julien.dubois@gmail.com>
    
 # make sure the package repository is up to date
-RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
+# RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.163.com/ubuntu/ utopic main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.163.com/ubuntu/ utopic-security main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.163.com/ubuntu/ utopic-updates main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.163.com/ubuntu/ utopic-proposed main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.163.com/ubuntu/ utopic-backports main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.163.com/ubuntu/ utopic main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.163.com/ubuntu/ utopic-security main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.163.com/ubuntu/ utopic-updates main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.163.com/ubuntu/ utopic-proposed main restricted universe multiverse" > /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.163.com/ubuntu/ utopic-backports main restricted universe multiverse" > /etc/apt/sources.list
+
+
 RUN apt-get -y update   
 
 # install python-software-properties (so you can   do add-apt-repository)
