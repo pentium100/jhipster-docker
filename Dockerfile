@@ -24,6 +24,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-software-propert
 # install SSH server so we can connect multiple times to the container
 RUN apt-get -y install openssh-server && mkdir /var/run/sshd
 
+# install make
+RUN apt-get -y install build-essential
+
 # install oracle java from PPA
 RUN add-apt-repository ppa:webupd8team/java -y
 RUN apt-get update
@@ -39,6 +42,9 @@ RUN apt-get -y install vim git sudo zip bzip2 fontconfig curl
 
 # install maven
 RUN apt-get -y install maven
+
+
+
 
 # install node.js
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
