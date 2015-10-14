@@ -1,6 +1,6 @@
 # DOCKER-VERSION 0.7.1
 FROM      ubuntu:14.04
-MAINTAINER Julien Dubois  <julien.dubois@gmail.com>
+MAINTAINER Julien Dubois    <julien.dubois@gmail.com>
 
 # make sure the package repository is up to date
 RUN echo "deb http://archive.ubuntu.com/ubuntu utopic main universe" > /etc/apt/sources.list
